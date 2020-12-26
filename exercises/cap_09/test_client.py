@@ -22,7 +22,7 @@ class Pessoa:
 class Cliente(Pessoa):
     """Define a estrutura de um cliente."""
 
-    def __init__(self, nome, endereco, cpf, rg, limite):
+    def __init__(self, nome, endereco, cpf, rg, limite=0):
         """Inicializa a classe-pai."""
         super().__init__(nome, endereco, cpf, rg)
         self.limite = limite

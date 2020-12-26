@@ -1,6 +1,3 @@
-"""Uma classe que permite representar um carro."""
-
-
 class Car():
     """Uma tentativa simples de representar um carro."""
 
@@ -37,7 +34,20 @@ class Car():
         else:
             print("You can't roll back an odometer!")
 
+my_new_car = Car('audi', 'a4', 2016)
+print(my_new_car.get_descriptive_name())
 
-    def fill_gas_tank():
-        """Carros normais possuem tanques de gasolina."""
-        print("This car needs a gas tank!")
+my_new_car.update_odometer(23)
+my_new_car.read_odometer()
+
+my_new_car.update_odometer(10)
+my_new_car.read_odometer()
+
+my_used_car = Car('subaru', 'outback', 2013)
+print(my_used_car.get_descriptive_name())
+
+my_used_car.update_odometer(23500)
+my_used_car.read_odometer()
+
+my_used_car.increment_odometer(0)
+my_used_car.read_odometer()
