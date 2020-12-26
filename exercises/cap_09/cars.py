@@ -7,17 +7,14 @@ class Car():
         self.year = year
         self.odometer_reading = 0
 
-
     def get_descriptive_name(self):
         """Devolve um nome descritivo, formatado de modo elegante"""
         long_name = str(self.year) + ' ' + self.make + ' ' + self.model
         return long_name.title()
 
-
     def read_odometer(self):
         """Exibe uma frase que mostra a milhagem do carro"""
         print("This car has " + str(self.odometer_reading) + " miles on it.")
-
 
     def update_odometer(self, mileage):
         """Define o valor de leitura do hodômetro com o valor especificado."""
@@ -26,14 +23,12 @@ class Car():
         else:
             print("You can't roll back an odometer!")
 
-
     def increment_odometer(self, miles):
         """Soma a quantidade especificada ao valor do hodômetro."""
         if miles >= 0:
             self.odometer_reading += miles
         else:
             print("You can't roll back an odometer!")
-
 
     def fill_gas_tank():
         """Carros normais possuem tanques de gasolina."""
@@ -47,11 +42,9 @@ class Battery():
         """Inicializa os atributos da bateria."""
         self.battery_size = battery_size
 
-
     def describe_battery(self):
         """Exibe uma frase que descreve a capacidade da bateria."""
         print("This car has a " + str(self.battery_size) + "-kWh battery.")
-
 
     def get_range(self):
         """Exibe uma frase sobre a distância que o carro é capaz de percorrer
@@ -64,7 +57,6 @@ class Battery():
         message = "This car can go approximately " + str(rangee)
         message += " miles on a full charge."
         print(message)
-
 
 
 class ElectricCar(Car):
